@@ -2,8 +2,8 @@ let btnMenu = document.querySelector('.header-menu i');
 let navbar = document.querySelector('.header-navbar');
 let closeBtn = document.querySelector('.close i');
 let controlBackToTop = document.querySelector('.control-back-to-top');
-let header = document.querySelector('.header')
-
+let header = document.querySelector('.header');
+console.log(header.offsetHeight);
 navbar.classList.remove('active');
 
 btnMenu.addEventListener('click', function () {
@@ -53,6 +53,7 @@ items.forEach((ele) => {
     });
 });
 
+
 const banner = document.getElementById('moveHeader');
 const highValueProduct = document.getElementById('moveProduct');
 const partner = document.getElementById('movePartner');
@@ -64,8 +65,8 @@ const partOfWeb = [banner, highValueProduct, partner, review, contact];
 function activeMenu() {
     partOfWeb.forEach((ele, index) => {
         if (
-            window.scrollY >= ele.offsetTop - 80 &&
-            window.scrollY <= ele.offsetTop + ele.offsetHeight - 88
+            window.scrollY + header.offsetHeight >= ele.offsetTop &&
+            window.scrollY + header.offsetHeight <= (ele.offsetTop + ele.offsetHeight)
         ) {
             items[index].style.setProperty(
                 '--background-beforeElement',

@@ -110,6 +110,10 @@
         width: 300px;
     }
 
+    .header-item::before {
+        background-color: #fff;
+    }
+
     .header-link {
         display: block;
         color: #fff;

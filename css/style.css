@@ -228,6 +228,9 @@ button:hover {
     font-weight: 700;
     width: 300px;
   }
+  .header-item::before {
+    background-color: #fff;
+  }
   .header-link {
     display: block;
     color: #fff;
@@ -305,6 +308,9 @@ button:hover {
   }
 }
 @media screen and (max-width: 1023.98px) {
+  .banner-main {
+    bottom: 30px;
+  }
   .banner-heading {
     font-size: 3.6em;
     font-weight: 500;
@@ -316,6 +322,9 @@ button:hover {
   }
 }
 @media screen and (max-width: 767.98px) {
+  .banner-main {
+    bottom: 20px;
+  }
   .banner-heading {
     font-size: 2.8em;
     font-weight: 400;
