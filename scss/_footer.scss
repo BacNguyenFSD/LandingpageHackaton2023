@@ -20,7 +20,7 @@
         margin-bottom: 10px;
     }
     &-desc {
-        font-size: 1.4em;
+        font-size: 1.6em;
         font-weight: 300;
         line-height: 1.4;
         color: #fff;
@@ -68,8 +68,9 @@
     &-copyright {
         text-align: center;
         padding-top: 20px;
-        border-top: 1px solid $boder-color;
+        border-top: 1px solid #fff;
         font-size: 18px;
+        color: #fff;
     }
 }
 @media screen and (max-width: 1023.98px) {

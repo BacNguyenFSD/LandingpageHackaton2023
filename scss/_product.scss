@@ -8,13 +8,13 @@
     }
     &-list {
         margin-top: 80px;
-        display: flex;
+        display: grid;
+        grid-gap:20px;
+        grid-template-columns: repeat(3,1fr);
         align-items: center;
-        flex-wrap: wrap;
+        justify-content: center;
     }
     &-item {
-        margin: 20px;
-        width: calc(100% / 3 - 40px);
         padding: 20px;
         background-color: $white-color;
         border-radius: 8px;
@@ -55,9 +55,40 @@
         display: flex;
         align-items: center;
         gap: 0 10px;
+        margin-bottom: 10px;
         span {
             font-size: 1.6em;
             line-height: 1;
+            font-weight: 500;
+            color: #7c8291;
+        }
+        i {
+            font-size: 14px;
+            color: #7c8291;
+        }
+    }
+    &-acreage, &-room {
+        margin-bottom: 10px;
+        display: flex;
+        gap: 0 10px;
+        span {
+            font-size: 1.6em;
+            line-height: 1;
+            font-weight: 500;
+            color: #7c8291;
+        }
+        i {
+            font-size: 14px;
+            color: #7c8291;
+        }
+    }
+    &-desc {
+        display: flex;
+        gap: 0 10px;
+        align-items: center;
+        span {
+            font-size: 1.6em;
+            line-height: 1.2;
             font-weight: 500;
             color: #7c8291;
         }
@@ -81,9 +112,9 @@
     }
     &-price {
         position: absolute;
-        left: 10px;
-        bottom: 23%;
-        transform: translateY(23%);
+        bottom: 30%;
+        left: 8%;
+        transform: translateY(-60%);
         padding: 10px 16px;
         color: #fff;
         font-size: 16px;
@@ -98,11 +129,11 @@
         padding: 40px 10px;
     }
     .product-item {
-        width: calc((100% / 2 - 40px));
+        width: 100%;
     }
     .product-list {
-        flex-wrap: wrap;
-        align-items: center;
+        grid-template-columns: repeat(2,2fr);
+        grid-gap: 20px 20px;
     }
     .product {
         .product-list:hover > .product-item:not(:hover) {
@@ -115,32 +146,29 @@
 }
 @media screen and (max-width: 767.98px) {
     .product-main {
-        padding: 30px 20px;
+        padding: 30px;
     }
     .product-item {
-        width: calc((100% - 40px));
+        width: 100%;
     }
     .product-list {
         margin-top: 40px;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap:20px;
     }
     .product-img {
         height: 400px;
     }
     .product-price {
-        left: 10px;
-        bottom: 18%;
+        left: 20px;
         transform: translateY(23%);
     }
 }
 
 @media screen and (max-width: 600px) {
-    .product-img {
-        height: 290px;
-    }
     .product-price {
-        left: 10px;
-        bottom: 23%;
-        transform: translateY(23%);
+        left: 20px;
+        transform: translateY(-35%);
     }
 }
 @media screen and (max-width: 480px) {
@@ -163,14 +191,19 @@
     }
     .product-item {
         width: calc((100%));
-        margin: 0;
+        margin: 20px 0;
     }
     .product-img {
         height: 250px;
     }
     .product-price {
-        left: 10px;
-        bottom: 28%;
-        transform: translateY(23%);
+        left: 20px;
+        transform: translateY(-85%);
+    }
+}
+@media screen and (max-width: 392px) {
+    .product-price {
+        left: 20px;
+        transform: translateY(-115%);
     }
 }

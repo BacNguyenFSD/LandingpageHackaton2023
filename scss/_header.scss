@@ -6,6 +6,9 @@
     z-index: 99;
     background-color: $white-color;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    &.sticky {
+        background-color: $primary-color;
+    }
     &-main {
         display: flex;
         align-items: center;
@@ -14,22 +17,20 @@
         height: 70px;
     }
     &-logo {
-        width: 50px;
-        height: 50px;
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 0 5px;
         span {
             color: $primary-color;
-            font-size: 3em;
+            font-size: 2.5em;
             font-weight: 700;
-            max-width: 80px;
         }
         img {
-            width: 100%;
-            height: 100%;
+            width: 50px;
+            height: 50px;
             object-fit: cover;
+        }
+        :hover {
+               cursor: pointer;
         }
     }
     &-navbar {
@@ -40,22 +41,29 @@
     }
     &-item {
         position: relative;
+        &::before {
+               content: "";
+               position: absolute;
+               height: 5px;
+               width: var(--background-beforeElement, 0);
+               border-radius: 5px;
+               background-color: black;
+               bottom: -10px;
+               left: 0;
+               transition: all .5s;
+        }
+        &:hover::before {
+            width: 100%;
+        }
     }
     &-link {
         font-size: 1.8em;
-        font-weight: 500;
+        font-weight: 700;
         color: $black-color;
         line-height: calc(22 / 18);
         text-decoration: none;
         padding-bottom: 5px;
         transition: 0.3s linear;
-
-        &:hover {
-            border-bottom: 1px solid $primary-color;
-        }
-    }
-    &-link-active {
-        border-bottom: 1px solid $primary-color;
     }
     &-menu {
         display: none;
@@ -95,6 +103,11 @@
             right: 20px;
             cursor: pointer;
         }
+    }
+    .header-logo span {
+        font-size: 1.8em;
+        font-weight: 700;
+        width: 300px;
     }
 
     .header-link {
