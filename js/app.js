@@ -60,7 +60,7 @@ const partOfWeb = [highValueProduct, partner, review, benefits, contact];
 
 function activeMenu() {
     partOfWeb.forEach((ele, index) => {
-        if ((window.scrollY + header.offsetHeight >= ele.offsetTop) && (window.scrollY + header.offsetHeight <= ele.offsetTop + ele.offsetHeight)) {
+        if ((window.scrollY + header.offsetHeight >= ele.offsetTop) && (window.scrollY + header.offsetHeight <= ele.offsetTop + ele.offsetHeight*0.65)) {
             items[index].style.setProperty('--background-beforeElement', '100%');
         } else {
             items[index].style.setProperty('--background-beforeElement', '0');
