@@ -16,7 +16,7 @@ closeBtn.addEventListener('click', function () {
 // Back to top
 window.onscroll = function () {
     navbar.classList.remove('active');
-    if (window.scrollY > 1000) {
+    if (window.scrollY > 400) {
         controlBackToTop.classList.add('show');
     } else {
         controlBackToTop.classList.remove('show');
