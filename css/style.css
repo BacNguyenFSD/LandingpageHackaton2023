@@ -152,6 +152,11 @@ button:hover {
 .header-logo :hover {
   cursor: pointer;
 }
+.header-logo span {
+  font-size: 2em;
+  font-weight: 700;
+  color: #262d37;
+}
 .header-navbar {
   display: flex;
   align-items: center;

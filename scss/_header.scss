@@ -32,6 +32,11 @@
         :hover {
                cursor: pointer;
         }
+        & span {
+            font-size: 2em;
+            font-weight: 700;
+            color: #262d37;
+        }
     }
     &-navbar {
         display: flex;
