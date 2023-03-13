@@ -51,12 +51,12 @@ items.forEach((ele) => {
     });
 });
 
-const banner = document.getElementById('moveHeader');
 const highValueProduct = document.getElementById('moveProduct');
 const partner = document.getElementById('movePartner');
 const review = document.getElementById('moveReview');
+const benefits = document.getElementById('moveBenefits');
 const contact = document.getElementById('moveContact');
-const partOfWeb = [banner, highValueProduct, partner, review, contact];
+const partOfWeb = [highValueProduct, partner, review, benefits, contact];
 
 function activeMenu() {
     partOfWeb.forEach((ele, index) => {
