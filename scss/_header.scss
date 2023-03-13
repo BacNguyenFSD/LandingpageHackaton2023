@@ -49,7 +49,7 @@
         &::before {
                content: "";
                position: absolute;
-               height: 4px;
+               height: 5px;
                width: var(--background-beforeElement, 0);
                border-radius: 5px;
                background-color: black;
